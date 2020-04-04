@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;400&display=swap');
 
 body{
-  padding: 20px;
+  transition: 0.7s;
+  padding: 10px;
   height: 50%;
 }
 
@@ -37,6 +38,7 @@ img{
 }
 
 #list{
+  transition: 0.7s;
   font-size: 17px;
   font-family: 'Source Code Pro';
 }
@@ -48,4 +50,29 @@ img{
 
 .center{
   text-align: center;
+}
+
+.typing-anim{
+ overflow: hidden; /* Ensures the content is not revealed until the animation */
+ border-right: .15em solid black; /* The typwriter cursor */
+ white-space: nowrap; /* Keeps the content on a single line */
+ margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+ letter-spacing: 2px; /* Adjust as needed */
+ animation:
+ typing 2.5s steps(40, end),
+ blinking-cursor .75s  infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blinking-cursor {
+  from, to {
+     border-color: transparent;
+   }
+  50% {
+    border-color: black;
+  }
 }
